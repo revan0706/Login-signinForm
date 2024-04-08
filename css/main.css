@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  video {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    object-fit: cover;
+  }
+  .box {
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    transition-property: all;
+    transition-duration: 1s;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    .loginwindow,
+    .signwindow {
+      width: 450px;
+      height: 450px;
+      position: absolute;
+    }
+    .loginwindow {
+      background-color: transparent;
+      backdrop-filter: blur(60px);
+      h1 {
+        text-align: center;
+      }
+      form {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 54px;
+        input {
+          height: 32px;
+          padding: 5px;
+          border-top: 0px;
+          border-right: 0px;
+          border-left: 0px;
+          background-color: transparent !important;
+        }
+        input::placeholder {
+          font-size: 14px;
+        }
+        input[type="button"] {
+          height: 36px;
+          border: 1px solid black;
+          border-radius: 12px;
+          margin-top: 82px;
+          background: linear-gradient(
+            90deg,
+            rgba(250, 250, 250, 1) 34%,
+            rgba(154, 169, 173, 1) 75%
+          );
+        }
+        .rememberMe {
+          margin-top: 15px;
+          input {
+            height: 13px;
+          }
+          label {
+            color: rgb(118, 118, 118);
+          }
+        }
+      }
+      p {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        padding: 0px 54px;
+        gap: 20px;
+        margin: 30px;
+        label {
+          color: blue;
+          text-decoration: underline;
+        }
+      }
+    }
+    .signwindow {
+      background-color: transparent;
+      backdrop-filter: blur(60px);
+      transform: rotateY(-180deg) translateZ(0.01em);
+      h1 {
+        text-align: center;
+      }
+      form {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 54px;
+        input {
+          height: 32px;
+          padding: 5px;
+          border-top: 0px;
+          border-right: 0px;
+          border-left: 0px;
+          background-color: transparent;
+        }
+        input::placeholder {
+          font-size: 14px;
+        }
+        input[type="button"] {
+          height: 36px;
+          border: 1px solid black;
+          border-radius: 12px;
+          background: linear-gradient(
+            90deg,
+            rgba(250, 250, 250, 1) 34%,
+            rgba(154, 169, 173, 1) 75%
+          );
+        }
+      }
+      p {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        padding: 0px 54px;
+        gap: 20px;
+        margin: 30px;
+        label {
+          color: blue;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .box:has(input[id="change"]:checked) {
+    transform: rotateY(180deg);
+  }
+}
