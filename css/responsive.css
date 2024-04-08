@@ -1,0 +1,13 @@
+@media (max-width: 500px) {
+  .box {
+    width: 350px !important;
+    .loginwindow,
+    .signwindow {
+      width: 350px !important;
+    }
+    p {
+      margin: 0px !important;
+      padding: 10px 0px !important;
+    }
+  }
+}
