@@ -15,4 +15,16 @@ function signIn() {
   );
 }
 
-function login() {}
+function login() {
+  let logUserEmail = document.getElementById("logUserEmail").value;
+  let logUserPassword = document.getElementById("logUserPassword").value;
+  if (localStorage.getItem("usersData").search(logUserEmail) >= 0) {
+    if (localStorage.getItem("usersData").search(logUserPassword) >= 0) {
+      alert("Login Succesful!");
+    } else {
+      alert("Login Failed!");
+    }
+  } else {
+    alert("Login Failed!");
+  }
+}
