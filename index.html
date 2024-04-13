@@ -38,6 +38,10 @@
             name=""
             id="signInUserEmail"
             placeholder="Email:"
+            onkeydown="  if (document.getElementById('signInUserEmail').value.length > 0) {
+              document.getElementById('signInUserEmail').style.backgroundColor =
+                'transparent';
+            }"
             required
           />
           <br />
@@ -47,6 +51,10 @@
             id="signInUserPassword"
             placeholder="Password:"
             required
+            onkeydown="  if (document.getElementById('signInUserPassword').value.length > 0) {
+              document.getElementById('signInUserPassword').style.backgroundColor =
+                'transparent';
+            }"
           />
           <br />
           <br />
@@ -67,6 +75,10 @@
             id="logUserEmail"
             placeholder="Email"
             required
+            onkeydown="  if (document.getElementById('logUserEmail').value.length > 0) {
+              document.getElementById('logUserEmail').style.backgroundColor =
+                'transparent';
+            }"
           />
           <br />
           <br />
@@ -76,6 +88,10 @@
             id="logUserPassword"
             placeholder="Password"
             required
+            onkeydown="  if (document.getElementById('logUserPassword').value.length > 0) {
+              document.getElementById('logUserPassword').style.backgroundColor =
+                'transparent';
+            }"
           />
           <div class="rememberMe">
             <input
